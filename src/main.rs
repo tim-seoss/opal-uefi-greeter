@@ -2,10 +2,8 @@
 #![no_main]
 #![feature(abi_efiapi)]
 #![feature(negative_impls)]
-#![feature(const_fn_trait_bound)]
 #![feature(new_uninit)]
 #![feature(maybe_uninit_slice)]
-#![feature(bool_to_option)]
 #![allow(clippy::missing_safety_doc)]
 
 #[macro_use]
