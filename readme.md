@@ -38,6 +38,20 @@ If you have multiple SEDs - only one of them has to have the image! This is true
 even without using this project I believe. Also, a reminder that this project currently only supports
 NVMe drives with OPAL v2 support, no enterprise.
 
+## Building
+This is known to build with:
+
+    rustup install nightly-2022-06-16
+    rustup component add --toolchain nightly rust-src
+    rustup component add rust-src --toolchain nightly-2022-06-16-x86_64-unknown-linux-gnu
+    cargo +nightly-2022-06-16  build --release --target x86_64-unknown-uefi
+
+This will yield a binary at:
+
+    ./target/x86_64-unknown-uefi/release/opal-uefi-greeter.efi
+
+... the current nightly release may work, but this has not been tested.
+
 ## License
 As with most of my projects, just MIT, no idea about the Rust dual-licensing stuff.
 
